@@ -247,3 +247,63 @@ footer {
     padding: 21px;
   }
 }
+
+#practice label {
+  display: block;
+  margin-top: 18px;
+  margin-bottom: 7px;
+  font-weight: bold;
+}
+
+#practice select {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  border-radius: 9px;
+  background: #0b1020;
+  border: 1px solid #394763;
+  color: white;
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+#quiz-area {
+  margin-top: 25px;
+}
+
+.quiz-question {
+  padding: 20px 0;
+  border-top: 1px solid #394763;
+}
+
+.quiz-option {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  text-align: left;
+  margin-top: 9px;
+  background: #202b43;
+  color: white;
+  border: 1px solid #394763;
+  border-radius: 9px;
+}
+
+.quiz-option:hover {
+  border-color: #9875ff;
+}
+
+.quiz-option:disabled {
+  cursor: default;
+  opacity: 0.9;
+}
+
+.quiz-feedback {
+  margin-top: 12px;
+  color: #b8c7df;
+}
+
+.quiz-score {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 20px 0;
+}
