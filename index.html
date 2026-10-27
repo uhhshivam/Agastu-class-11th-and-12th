@@ -105,7 +105,34 @@
       </div>
     </section>
 
-    <section class="section" id="practice">
+    
+<section class="section" id="practice">
+  <h2 class="section-title">CBSE Question Practice</h2>
+  <p class="section-subtitle">
+    Test your knowledge and learn from every answer.
+  </p>
+
+  <div class="card">
+    <label for="quiz-class">Choose Class</label>
+    <select id="quiz-class">
+      <option value="11">Class 11</option>
+      <option value="12">Class 12</option>
+    </select>
+
+    <label for="quiz-subject">Choose Subject</label>
+    <select id="quiz-subject">
+      <option value="Physics">Physics</option>
+      <option value="Chemistry">Chemistry</option>
+      <option value="Mathematics">Mathematics</option>
+      <option value="Computer Science">Computer Science</option>
+    </select>
+
+    <button class="btn" onclick="startQuiz()">Start Quiz</button>
+
+    <div id="quiz-area" aria-live="polite"></div>
+  </div>
+</section>
+
       <div class="chat-banner">
         <h2>📝 Ready to test yourself?</h2>
         <p>
