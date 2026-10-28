@@ -143,7 +143,47 @@
       </div>
     </section>
 
-    <section class="section" id="ask">
+    
+<section class="section" id="ask">
+  <h2 class="section-title">🤖 Ask AGASTU</h2>
+  <p class="section-subtitle">
+    Your AI study assistant for CBSE Classes 11 and 12.
+  </p>
+
+  <div class="chat-box">
+    <div class="chat-header">
+      <div class="chat-avatar">A</div>
+      <div>
+        <h3>AGASTU AI Tutor</h3>
+        <p>Physics · Chemistry · Maths · Computer Science</p>
+      </div>
+    </div>
+
+    <div id="chat-messages" class="chat-messages" aria-live="polite">
+      <div class="message bot-message">
+        Hi! I'm AGASTU. Ask me a CBSE study question, and I'll help
+        you understand it.
+      </div>
+    </div>
+
+    <form id="chat-form" class="chat-form">
+      <input
+        id="chat-input"
+        type="text"
+        placeholder="Ask your doubt..."
+        autocomplete="off"
+        maxlength="2000"
+        required
+      >
+      <button class="btn" type="submit">Send</button>
+    </form>
+
+    <p id="chat-status" class="chat-status" aria-live="polite">
+      Chat interface ready. AI connection comes next.
+    </p>
+  </div>
+</section>
+
       <div class="chat-banner">
         <div class="card-icon">🤖</div>
         <h2>Ask AGASTU</h2>
