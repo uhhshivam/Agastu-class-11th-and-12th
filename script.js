@@ -552,7 +552,37 @@ if (agastuChatForm) {
     input.value = "";
     messages.scrollTop = messages.scrollHeight;
 
-    status.textContent =
-      "Demo mode: connect an AI backend to receive real answers.";
+    status.textContent = "AGASTU AI is thinking...";
+
+try {
+  const response = await fetch(
+    "https://agastu-ai-backend.onrender.com/ask",
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        question: question
+      })
+    }
+  );
+
+  const data = await response.json();
+
+  const reply = document.createElement("div");
+  reply.className = "message bot-message";
+  reply.textContent = response.ok
+    ? data.answer
+    : (data.error || "Sorry, something went wrong.");
+
+  messages.appendChild(reply);
+  status.textContent = "Ready";
+} catch (error) {
+  status.textContent = "Connection error. Please try again.";
+}
+
+input.value = "";
+messages.scrollTop = messages.scrollHeight;
   });
 }
