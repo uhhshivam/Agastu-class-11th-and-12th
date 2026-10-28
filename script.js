@@ -510,3 +510,36 @@ function openChat() {
   }
 }
 
+
+const agastuChatForm = document.getElementById("chat-form");
+
+if (agastuChatForm) {
+  agastuChatForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    const input = document.getElementById("chat-input");
+    const messages = document.getElementById("chat-messages");
+    const status = document.getElementById("chat-status");
+
+    const question = input.value.trim();
+    if (!question) return;
+
+    const userMessage = document.createElement("div");
+    userMessage.className = "message user-message";
+    userMessage.textContent = question;
+    messages.appendChild(userMessage);
+
+    const reply = document.createElement("div");
+    reply.className = "message bot-message";
+    reply.textContent =
+      "Your question has been added to the chat interface. " +
+      "The real AI connection is not configured yet.";
+    messages.appendChild(reply);
+
+    input.value = "";
+    messages.scrollTop = messages.scrollHeight;
+
+    status.textContent =
+      "Demo mode: connect an AI backend to receive real answers.";
+  });
+}
