@@ -483,15 +483,28 @@ function selectClass(classNumber) {
 
   if (select) select.value = String(classNumber);
   if (section) section.scrollIntoView({ behavior: "smooth" });
-}
 
 function selectSubject(subject) {
-  const select = document.getElementById("quiz-subject");
-  const section = document.getElementById("practice");
+  const askSection = document.getElementById("ask");
+  const chatInput = document.getElementById("chat-input");
+  const chatStatus = document.getElementById("chat-status");
 
-  if (select) select.value = subject;
-  if (section) section.scrollIntoView({ behavior: "smooth" });
+  if (askSection) {
+    askSection.scrollIntoView({ behavior: "smooth" });
+  }
+
+  if (chatInput) {
+    chatInput.value = "Help me learn " + subject +
+      " for CBSE Class 11 and 12.";
+    chatInput.focus();
+  }
+
+  if (chatStatus) {
+    chatStatus.textContent =
+      subject + " selected. Send your question to continue.";
+  }
 }
+
 
 function startPractice() {
   const section = document.getElementById("practice");
