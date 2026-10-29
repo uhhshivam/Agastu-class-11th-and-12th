@@ -761,15 +761,16 @@
           status.textContent = "Ready";
         }
       } catch (error) {
-        console.error("AGASTU AI chat error:", error);
+  console.error("AGASTU AI chat error:", error);
 
-        reply.textContent =
-          "I couldn't connect to the AI just now. Please try again in a moment.";
+  reply.textContent =
+    "Error: " + (error.message || "Unknown connection error");
 
-        if (status) {
-          status.textContent = "Connection error";
-        }
-      } finally {
+  if (status) {
+    status.textContent = "Error: " + (error.message || "Unknown");
+  }
+      }
+      finally {
         input.disabled = false;
 
         if (submitButton) {
