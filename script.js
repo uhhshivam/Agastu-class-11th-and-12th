@@ -5,7 +5,7 @@
 (() => {
   "use strict";
 
-  const BACKEND_URL = "https://agastu-ai-backend.onrender.com";
+  const BACKEND_URL = "https://agastu-ai-backend-1.onrender.com";
 
   const $ = (selector, root = document) =>
     root.querySelector(selector);
